@@ -37,8 +37,22 @@ module.exports = {
                 use: ['style-loader', 'css-loader']
             },
             {
+                test: /\.s[ac]ss$/,
+                exclude: /\.module\.s[ac]ss/,
+                use: [ MiniCssExtractPlugin.loader, "css-loader", "sass-loader" ]
+            },
+            {
+              test: /\.module\.s[ac]ss$/,
+              use: ['style-loader', 'css-loader', 'sass-loader']
+            },
+            {
                 test: /\.(png|svg|jpg|jpeg)$/,
                 type: "asset/resource"
+            },
+            {
+                test: /\.m?js$/,
+                exclude: /node_modules/,
+                use: ['babel-loader']
             }
         ]
     },

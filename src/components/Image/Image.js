@@ -1,4 +1,4 @@
-import img_class from './image.module.css'
+import img_class from './image.module.scss'
 
 export const Image = (img) => {
     console.log(img)
