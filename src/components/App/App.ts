@@ -10,7 +10,7 @@ import img from '../../assets/images/Sky_Zero_image01_RGB_2500_x_950.jpg'
 const div = document.createElement('div')
 div.classList.add(app.style)
 
-export const App = (el) => {
+export const App = (el: HTMLElement) => {
     if(el) {
         div.appendChild(el)
     }

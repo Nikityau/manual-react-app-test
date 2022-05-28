@@ -6,7 +6,7 @@ module.exports = {
     context: path.resolve(__dirname, 'src'),
     entry: './index.js',
     resolve: {
-        extensions: ['.js']
+        extensions: ['.js', '.ts', '.tsx', '.jsx']
     },
     output: {
         filename: "[name].[contenthash].bundle.js",
@@ -34,7 +34,7 @@ module.exports = {
             },
             {
                 test: /\.module\.css$/,
-                use: ['style-loader', 'css-loader']
+                use: ['style-loader','css-modules-typescript-loader' ,'css-loader']
             },
             {
                 test: /\.s[ac]ss$/,
@@ -43,7 +43,7 @@ module.exports = {
             },
             {
               test: /\.module\.s[ac]ss$/,
-              use: ['style-loader', 'css-loader', 'sass-loader']
+              use: ['style-loader', 'css-modules-typescript-loader' ,'css-loader', 'sass-loader']
             },
             {
                 test: /\.(png|svg|jpg|jpeg)$/,
@@ -53,6 +53,11 @@ module.exports = {
                 test: /\.m?js$/,
                 exclude: /node_modules/,
                 use: ['babel-loader']
+            },
+            {
+                test: /\.tsx?$/,
+                exclude: /node_modules/,
+                use: 'ts-loader'
             }
         ]
     },
