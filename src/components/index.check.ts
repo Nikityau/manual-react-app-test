@@ -1,5 +1,5 @@
 export class Logger {
-    public static Success(message:string) {
-        console.log('SUCCESS', message)
-    }
+  public static Success(message: string) {
+    console.log("SUCCESS", message);
+  }
 }

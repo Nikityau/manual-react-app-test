@@ -1,0 +1,13 @@
+{
+  "parser": "@babel/eslint-parser",
+  "rules": {
+    "max-len": [
+      1,
+      100,
+      2,
+      {
+        "ignoreComments": true
+      }
+    ]
+  }
+}

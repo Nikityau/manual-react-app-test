@@ -1,5 +1,5 @@
 {
-  "include": ["src/**/*"],
+  "include": ["src/**/*", "./env.d.ts"],
   "exclude": ["node_modules", "**/*.spec.ts"],
   "compilerOptions": {
     "allowUnreachableCode": false,
@@ -30,6 +30,6 @@
     "outDir": "./dist/",
     "allowJs": true,
     "jsx": "react",
-    "declaration": false,
-  },
+    "declaration": false
+  }
 }
