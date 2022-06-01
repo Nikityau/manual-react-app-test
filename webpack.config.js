@@ -48,7 +48,7 @@ module.exports = {
         use: ["style-loader", "css-modules-typescript-loader", "css-loader", "sass-loader"],
       },
       {
-        test: /\.(png|svg|jpg|jpeg)$/,
+        test: /\.(png|svg|jpg|jpeg|gif)$/,
         type: "asset/resource",
       },
       {
@@ -64,7 +64,7 @@ module.exports = {
       {
         test: /\.tsx?$/,
         exclude: /node_modules/,
-        use: "ts-loader",
+        use: ["babel-loader","ts-loader"],
       },
     ],
   },
