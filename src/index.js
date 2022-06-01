@@ -1,13 +1,8 @@
-import "./style.css";
-import { App } from "./components/App/App";
+import React from "react";
+import ReactDOM from 'react-dom/client'
 
-import { Logger } from "./components/index.check";
+import App from "./components/App/App";
 
-const render = (el) => {
-  Logger.Success("render component");
-  const root = document.getElementById("root");
-  root.classList.add("container");
-  root.appendChild(el);
-};
 
-render(App());
+const root = ReactDOM.createRoot(document.getElementById('root'))
+root.render(<App/>)

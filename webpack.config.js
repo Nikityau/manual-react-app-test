@@ -18,6 +18,7 @@ module.exports = {
     static: {
       directory: path.resolve(__dirname, "public"),
     },
+    historyApiFallback:true,
     compress: true,
     port: 9000,
     open: true,
@@ -54,6 +55,11 @@ module.exports = {
         test: /\.m?js$/,
         exclude: /node_modules/,
         use: ["babel-loader"],
+      },
+      {
+        test: /\.jsx?$/,
+        exclude: /node_modules/,
+        use: ['babel-loader']
       },
       {
         test: /\.tsx?$/,
